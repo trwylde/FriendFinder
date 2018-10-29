@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/trwylde/FriendFinder/issues"
   },
-  "homepage": "https://github.com/trwylde/FriendFinder#readme"
+  "homepage": "https://github.com/trwylde/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
 }
