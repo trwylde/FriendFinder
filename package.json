@@ -1,0 +1,20 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Let us find you the perfect friend!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trwylde/FriendFinder.git"
+  },
+  "author": "trw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trwylde/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/trwylde/FriendFinder#readme"
+}
