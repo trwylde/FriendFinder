@@ -8,8 +8,9 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" 
-      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
 </head>
 <body>
@@ -52,7 +53,7 @@
 
 
     <h3><strong>Question 3</strong></h3>
-    <h4>I would rather do things perfectly than quickly.</h4>
+    <h4>I live by the motto, "Measure twice, cut once".</h4>
     <select class="chosen-select" id="q3">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -76,7 +77,7 @@
 
 
     <h3><strong>Question 5</strong></h3>
-    <h4>I make friends easily.</h4>
+    <h4>On more than one occasion, I have been caught dancing in the moonlight, rain, and/or the street.</h4>
     <select class="chosen-select" id="q5">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -88,7 +89,7 @@
 
 
     <h3><strong>Question 6</strong></h3>
-    <h4>I anticipate the needs of others.</h4>
+    <h4>Most of my social interactions are led by my intuition.</h4>
     <select class="chosen-select" id="q6">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -100,7 +101,7 @@
 
 
     <h3><strong>Question 7</strong></h3>
-    <h4>I choose my words with care.</h4>
+    <h4>I choose my words carefully and with much descretion.</h4>
     <select class="chosen-select" id="q7">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -111,7 +112,7 @@
     </select>
 
     <h3><strong>Question 8</strong></h3>
-    <h4>I have a vivid imagination.</h4>
+    <h4>I have a vivid imagination and let my creativity guide me.</h4>
     <select class="chosen-select" id="q8">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -122,7 +123,7 @@
     </select>
 
     <h3><strong>Question 9</strong></h3>
-    <h4>I find it difficult to approach others.</h4>
+    <h4>I would rather indulge in a hobby independently, than attend a party/large social gathering.</h4>
     <select class="chosen-select" id="q9">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -157,18 +158,75 @@
     </div>
   </footer>
 
-
       <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-
-      <!-- jQuery, Popper.js, Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <!-- Chosen -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+  
+  <script type="text/javascript">
+    var config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect": {
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 10
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Oops, nothing found!"
+      },
+      ".chosen-select-width": {
+        width: "95%"
+      }
+    };
+
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+
+  $("#submit").on("click", function() {
+    event.preventDefault();
+
+    function validateForm() {
+      var isValid = true;
+      $(".form-control").each(function() {
+        if ($(this).val() === "") {
+          isValid = false;
+        }
+      });
+
+      $(".chosen-select").each(function() {
+        if ($(this).val === "") {
+          isValid = false;
+        }
+      });
+      return isValid;
+    }
+
+    if (validateForm() == true) {
+      var userData = {
+        name: $("#name").val(),
+        photo: $("#photo").val(),
+        scores: [
+          $("#q1").val(),
+          $("#q2").val(),
+          $("#q3").val(),
+          $("#q4").val(),
+          $("#q5").val(),
+          $("#q6").val(),
+          $("#q7").val(),
+          $("#q8").val(),
+          $("#q9").val(),
+          $("#q10").val()
+        ]
+      };
+
+      var currentURL = window.location.origin;
+
+      $.post(currentURL + "/api/friends", userData, function(data) {
+        alert("Let's find you a friend!");
+      }) 
+    }
+  });
+  </script>
 </body>
 </html>
