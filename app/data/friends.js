@@ -11,7 +11,7 @@ var friends = [
       "5",
       "1",
       "5",
-      "1",
+      "4",
       "5"
     ]
   },
@@ -128,6 +128,102 @@ var friends = [
       "1"
     ]
   },
+  {
+    name: "Emilio Lopez",
+    photo: "https://vignette.wikia.nocookie.net/velvet/images/8/81/Emilio.jpg/revision/latest/scale-to-width-down/250?cb=20140309172531&path-prefix=es",
+    scores: [
+      "1",
+      "2",
+      "5",
+      "1",
+      "1",
+      "1",
+      "5",
+      "1",
+      "5",
+      "5"
+    ]
+  },
+  {
+    name: "Gloria Campos",
+    photo: "https://vignette.wikia.nocookie.net/velvet/images/6/60/Gloria_Campos.jpg/revision/latest/scale-to-width-down/250?cb=20140309173102&path-prefix=es",
+    scores: [
+      "3",
+      "1",
+      "1",
+      "1",
+      "2",
+      "4",
+      "4",
+      "1",
+      "1",
+      "4"
+    ]
+  },
+  {
+    name: "Christina Otegui",
+    photo: "https://vignette.wikia.nocookie.net/velvet/images/c/c6/Cristina_Otegui.jpg/revision/latest/scale-to-width-down/250?cb=20140309190421&path-prefix=es",
+    scores: [
+      "5",
+      "1",
+      "2",
+      "5",
+      "2",
+      "1",
+      "1",
+      "1",
+      "1",
+      "5"
+    ]
+  },
+  {
+    name: "Max Esposito",
+    photo: "https://vignette.wikia.nocookie.net/velvet/images/8/84/Max.jpg/revision/latest/scale-to-width-down/250?cb=20140309183138&path-prefix=es",
+    scores: [
+      "3",
+      "4",
+      "2",
+      "2",
+      "2",
+      "5",
+      "3",
+      "2",
+      "1",
+      "3"
+    ]
+  },
+  {
+    name: "Enrique Otegui",
+    photo: "https://fotografias.antena3.com/clipping/cmsimages01/2015/10/19/5E24947B-FF59-4BB4-B144-41F81CF8D58C/58.jpg",
+    scores: [
+      "4",
+      "1",
+      "4",
+      "1",
+      "1",
+      "1",
+      "2",
+      "1",
+      "4",
+      "2"
+    ]
+  },
+  {
+    name: "Clara Motesinos",
+    photo: "https://vignette.wikia.nocookie.net/velvet/images/3/35/Clara.jpg/revision/latest/scale-to-width-down/250?cb=20140309183445&path-prefix=es",
+    scores: [
+      "2",
+      "1",
+      "2",
+      "5",
+      "5",
+      "3",
+      "1",
+      "3",
+      "1",
+      "5"
+    ]
+  }
 ];
 
 module.exports = friends;
