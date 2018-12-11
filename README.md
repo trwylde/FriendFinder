@@ -9,4 +9,4 @@ responses, they will be shown the name and picture of
 another user with whom they have the highest compatibilty.
 
 Click below to explore the app 
-[# FriendFinder](https://friendfinder254.herokuapp.com/ "Click to visit FriendFinder at https://friendfinder254.herokuapp.com/")
+[FriendFinder](https://friendfinder254.herokuapp.com/ "Click to visit FriendFinder at https://friendfinder254.herokuapp.com/")
